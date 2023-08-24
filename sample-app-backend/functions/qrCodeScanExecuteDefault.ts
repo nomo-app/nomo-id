@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import { INonceSocket, IScanReturn, EStatusCode, getSocketFromNonceSocketMap, IExecuteReturn } from 'nomo-id';
-import { VerifyMsg } from '../local/utils.js';
+import { INonceSocket, IScanReturn, EStatusCode, getSocketFromNonceSocketMap, IExecuteReturn, verifyMsg } from 'nomo-id';
+
 
 
 
@@ -12,7 +12,7 @@ export async function qrExecuteDefault(req: Request, res: Response, nonceSocketM
         socket = getSocketFromNonceSocketMap(nonce, nonceSocketMap);
     }
 
-    let verified = VerifyMsg(auth_adr, auth_sig, uri);
+    let verified = verifyMsg(auth_adr, auth_sig, uri);
 
     if (verified && socket) {
         socket.emit("execute_default", req.body);
