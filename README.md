@@ -1,10 +1,10 @@
 # Overview
 
-This library is designed for developers to integrate the [Nomo app](https://nomo.app) into their applications. The mobile app uses the Nomo ID System Protocol. This protocol specifies how developers can interact with the mobile app. This documentation will first explain the core concept of the Nomo ID System Protocol. Afterwards we will explain the general workflow for integrating the mobile app into your application.
+This library is designed for developers to integrate the [Nomo app](https://nomo.app) into their applications. The mobile app uses the Nomo ID Protocol. This protocol specifies how developers can interact with the mobile app. This documentation will first explain the core concept of the Nomo ID Protocol. Afterwards we will explain the general workflow for integrating the mobile app into your application.
 
 ## Backend Library
 
-The backend-library is intended for NodeJS-Backends.
+The folder nomo-id containes the backend-library
 
 ## Nomo ID Protocol
 
