@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html,
+body {
+  font-family: "Inter", sans-serif;
+}
+
+@layer components {
+
+  .route-active {
+    @apply transition-all border-b-[1px] border-[#F4A12FFF] ;
+  }
+  .normal_input {
+    @apply px-3 py-3 rounded-md border-[1px] border-black text-black outline-none placeholder-black text-sm;
+  }
+  p {
+    @apply font-normal text-[#E7EEFA];
+  }
+  .op1 {
+    @apply bg-[#00B3A9];
+  }
+  .op2 {
+    @apply bg-[#BD5E80];
+  }
+  .op3 {
+    @apply bg-[#E7A536];
+  }
+}
+
+html, body, #__next {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+}

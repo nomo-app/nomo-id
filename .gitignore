@@ -1,0 +1,8 @@
+node_modules
+build
+dist
+docs
+/index.d.ts
+/nomo-id.cjs.js
+/nomo-id.esm.js
+/nomo-id.umd.js

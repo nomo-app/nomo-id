@@ -1,0 +1,29 @@
+{
+  "name": "sample-app-backend",
+  "version": "1.0.0",
+  "description": "Sample backend for Nomo ID",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "tsc && node dist/index.js",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.5.3",
+    "@types/ws": "^8.5.5",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "helmet": "^7.0.0",
+    "nodemon": "^3.0.1",
+    "typescript": "^5.1.6",
+    "ws": "^8.13.0"
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.13",
+    "bitcoinjs-message": "2.2.0",
+    "socket.io": "^4.7.2"
+  }
+}

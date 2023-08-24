@@ -1,0 +1,57 @@
+#TestQR {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 70px;
+  margin-inline: 40px;
+  min-height: 500px;
+  .name {
+    word-break: break-all;
+    font-size: 38px;
+    text-transform: uppercase;
+  }
+  .test-container {
+    > div > span,
+    > div > div > span {
+      font-weight: bold;
+
+    }
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: flex-start;
+    gap: 60px;
+    @media (max-width: 1200px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .prettyjson {
+        width: 100%;
+      }
+    }
+  }
+  .expected, .received {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 10px;
+    min-height: 350px;
+  }
+  .prettyjson {
+    width: 300px;
+    overflow-y: scroll;
+    flex-shrink: 0;
+    flex-grow: 1;
+    max-height: 350px;
+  }
+}
+
+.success {
+  background: green;
+}
+
+.failed {
+  background: red;
+}
