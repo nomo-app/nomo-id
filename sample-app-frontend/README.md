@@ -1,6 +1,6 @@
 # Sample App Frontend
 
-This is a sample app frontend for the [sample app backend](https://g.fastprj.tech/nomo/nomo-id/-/tree/master/sample-app-backend). It is a [Next.js](https://nextjs.org/) app that uses [React](https://reactjs.org/) and [Tailwind CSS](https://tailwindcss.com/).
+This is a sample app frontend for the [sample app backend](https://github.com/nomo-app/nomo-id/blob/main/sample-app-backend/README.md). It is a [Next.js](https://nextjs.org/) app that uses [React](https://reactjs.org/) and [Tailwind CSS](https://tailwindcss.com/).
 
 ## Getting Started
 
@@ -10,7 +10,7 @@ This is a sample app frontend for the [sample app backend](https://g.fastprj.tec
     npm install
     ```
   
-2. Change the server address in the [useSocket.jsx](https://g.fastprj.tech/nomo/nomo-id/-/blob/master/sample-app-frontend/hooks/useSocket.jsx) file to the address of the [sample app backend](https://g.fastprj.tech/nomo/nomo-id/-/tree/master/sample-app-backend).
+2. Change the server address in the [useSocket.jsx](https://github.com/nomo-app/nomo-id/blob/master/sample-app-frontend/hooks/useSocket.jsx) file to the address of the [sample app backend](https://github.com/nomo-app/nomo-id/blob/main/sample-app-backend/README.md).
 
     ```javascript
     // currently hardcoded

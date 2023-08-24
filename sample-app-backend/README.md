@@ -1,6 +1,6 @@
 # Sample App Backend
 
-This is the backend for the [sample app frontend](https://g.fastprj.tech/nomo/nomo-id/-/tree/master/sample-app-frontend).
+This is the backend for the [sample app frontend](https://github.com/nomo-app/nomo-id/blob/main/sample-app-frontend/README.md).
 It is a node.js app that uses [Express](https://expressjs.com/) and [Socket.IO](https://socket.io/).
 
 ## Getting Started
