@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { INonceSocket, IScanReturn, EStatusCode, getSocketFromNonceSocketMap, IExecuteReturn } from '../backend-library';
+import { INonceSocket, IScanReturn, EStatusCode, getSocketFromNonceSocketMap, IExecuteReturn } from '../../backend-library/src';
 import { VerifyMsg } from '../local/utils.js';
 
 

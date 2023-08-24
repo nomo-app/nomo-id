@@ -43,7 +43,7 @@ The following fields are supported as Request-URL paramters:
 | Image | i | Base64 encoded bitmap image |
 | Pincode | p | Pincode |
 | Generic Data/ x-data | x | Generic string for the client to sign |
-| Device ID | d | Device metadata to identify the client as implemented in <https://gitlab.vougee.gmbh/vougee/wallets/wallet-v1/-/blob/master/wallet/src/main/java/com/vougee/wallet/tools/GenericTools.java#L166> |
+| Device ID | d | Device metadata to identify the client as implemented.
 | JSON | j | A path to a same-origin-JSON to support additional features |
 | Walletname | w | A human-readable description of the wallet, e.g. "iPhone 13 Pro from Felix" |
 

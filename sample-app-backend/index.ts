@@ -1,4 +1,4 @@
-import { INonceSocket, initializeNonceSocketMap, addSocketToNonceSocketMap, authorize } from '../backend-library';
+import { INonceSocket, initializeNonceSocketMap, addSocketToNonceSocketMap, authorize } from '../backend-library/src';
 import express from 'express';
 import http from 'http';
 import cors from 'cors';
