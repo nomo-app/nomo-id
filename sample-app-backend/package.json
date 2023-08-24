@@ -24,6 +24,7 @@
   "dependencies": {
     "@types/cors": "^2.8.13",
     "bitcoinjs-message": "2.2.0",
+    "nomo-id": "^0.0.1",
     "socket.io": "^4.7.2"
   }
 }
