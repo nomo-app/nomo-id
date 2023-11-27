@@ -7,7 +7,7 @@ Nomo-ID can be used for linking non-WebOn-websites to a [Nomo wallet](https://no
 As such, Nomo-ID helps to close the gap between the WebOn-world and the world of traditional websites.
 Following the spirit of Nomo, Nomo-ID is a fully decentralized opensource protocol.
 
-> :warning: If you develop a pure WebOn, then we recommend the Nomo-Auth protocol instead of the Nomo-ID protocol.
+> :warning: If you develop a pure WebOn, then we recommend the [Nomo-Auth protocol](https://github.com/nomo-app/nomo-auth) instead of the Nomo-ID protocol.
 
 ## Features
 
