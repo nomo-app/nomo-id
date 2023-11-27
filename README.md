@@ -18,6 +18,41 @@ Following the spirit of Nomo, Nomo-ID is a fully decentralized opensource protoc
 - Device fingerprinting capabilities
 - Support for multiple types of signatures (see details below)
 
+## Signature Verification
+
+Typically, a Nomo-ID-backend will need to store addresses and verify associated signatures.
+Nomo-ID offers three different types of address/signature-pairs:
+
+- auth_adr + auth_sig
+- xauth_adr + xauth_sig
+- ETH-address + eth_sig
+
+To secure a backend, at least one of those address/signature-pairs must be verified (see details below).
+
+### auth_adr + auth_sig
+
+`auth_adr` is a special address that is derived from the user's wallet and the domain of your Nomo-ID-backend.
+
+`auth_sig` is an *“Eurocoin-message-signature"* that can be verified with packages like [bitcoinjs-message](https://www.npmjs.com/package/bitcoinjs-message).
+See the function [verifyMsg](https://github.com/nomo-app/nomo-id/blob/7758a9ce3685de7d748eb3449afcfcfb7be52342/nomo-id/src/core/map.ts#L44) as an example for verifying an `auth_sig`.
+
+> :warning: `auth_adr` will change whenever the domain of your Nomo-ID-backend changes! If you rely on `auth_adr` in a database, then you must never ever change the domain of your backend.
+
+### xauth_adr + xauth_sig
+
+Similar to `auth_adr`, `xauth_adr` is also an address that depends on the user's wallet and the domain of your Nomo-ID-backend.
+However, `xauth_adr` can be reused accross different backend-domains in certain situations.
+Please study the [advanced docs](https://github.com/nomo-app/nomo-id/tree/main/documentation) if you plan to use `xauth_adr`.
+
+### ETH-address + eth_sig
+
+`eth_sig` is an *"Ethereum-message-signature"* that can be verified with packages like ethers.js or web3.js.
+This verification works with the regular ETH-address of the Nomo-user.
+See the [ethSigDemo](https://github.com/nomo-app/nomo-webon-kit/blob/main/demo-webon/src/app/evm/eth_sig.ts) as an example for verifying an `eth_sig`.
+
+> :warning: In order to use `eth_sig`, your deeplink must include the URL-parameter `?tETH=1` or similar. This means that the Nomo App will transmit both an `eth_sig` and an ETH-address to a Nomo-ID-backend.
+
+
 ## Sample App
 
 The sample app showcases a possible workflow for integrating the Nomo App into a web-application.
