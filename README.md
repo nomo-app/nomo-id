@@ -1,14 +1,27 @@
-# Overview
+# Nomo-ID
 
-This library is designed for developers to integrate the [Nomo app](https://nomo.app) into their applications. The mobile app uses the Nomo ID Protocol. This protocol specifies how developers can interact with the mobile app. This documentation will first explain the core concept of the Nomo ID Protocol. Afterwards we will explain the general workflow for integrating the mobile app into your application.
+Nomo-ID is a flexible protocol for web3-based authentication, without any passwords.
+There exist websites that allow a login via Nomo-ID, but Nomo-ID can do much more than logins. 
 
-## Backend Library
+Nomo-ID can be used for linking non-WebOn-websites to a [Nomo wallet](https://nomo.app).
+As such, Nomo-ID helps to close the gap between the WebOn-world and the world of traditional websites.
+Following the spirit of Nomo, Nomo-ID is a fully decentralized opensource protocol.
 
-The folder nomo-id containes the backend-library
+> :warning: If you develop a pure WebOn, then we recommend the Nomo-Auth protocol instead of the Nomo-ID protocol.
 
-## Nomo ID Protocol
+## Features
 
-The protocol consists of two parts:
+- Authenticate on supported websites via QRCodes or deeplinks
+- Highly customizable authentication screen; including customized text with markdown rendering 
+- Support of websockets for an immediate UX-feedback after scanning QRCodes
+- Automated sharing of wallet addresses
+- Device fingerprinting capabilities
+- Support for multiple types of signatures (see details below)
+
+## Sample App
+
+The sample app showcases a possible workflow for integrating the Nomo App into a web-application.
+The sample app consists of two parts:
 
 - Server
 - Client
@@ -42,9 +55,9 @@ The Request-URL contains all the information needed by the mobile app. This incl
 
 **Note:** The mobile app is constantly updating. More options will become available for developers.
 
-## Workflow
+## Sample Workflow
 
-The following graphic shows the workflow for integrating the Nomo app into your application. We will explain the following workflow with a real use case. Assume you want a user to log into your website using the Nomo app. You can read more about Web3 authentication [here](https://www.leewayhertz.com/how-does-authentication-authorization-work-in-web3/).
+The following graphic shows a possible workflow for integrating the Nomo app into your application. We will explain the following workflow with a real use case. Assume you want a user to log into your website using the Nomo app. You can read more about Web3 authentication [here](https://www.leewayhertz.com/how-does-authentication-authorization-work-in-web3/).
 
 To achieve this, you will need to map a users wallet address to his account data. For this, a QR-Code should be provided where a user can *link his device*. To link a device a user must first scan a provided QR-Code (contains Request-URL) and sign the requested data. This can be seen as the first step in the figure.
 
@@ -56,9 +69,11 @@ When a user signs the requested data, the *qrExecuteDefault* will be called. The
 
 ![Workflow Overview](documentation/assets/Workflow.svg)
 
-## Nomo-ID Library
+## Backend npm package
 
-The library supports developer setting up the described workflow. The library provides interfaces for the *qrExecute* as well as the *qrScan* and the required return types.
+The subfolder `nomo-id` contains an npm packages that is intended for Nomo-ID-backends.
+
+The package supports developer setting up the described workflow. The library provides interfaces for the *qrExecute* as well as the *qrScan* and the required return types.
 
 The core of the library is the *authorize()* method.
 This method performs security checks on the implemented *qrExecute* and *qrScan* methods and returns the two methods able to be invoked within the back-end endpoints.
