@@ -115,3 +115,9 @@ This method performs security checks on the implemented *qrExecute* and *qrScan*
 Additionaly the library provides a mapping for sockets (if used) and the *nonce* parameter from the Request-URL.
 
 **Note:** The library will be further implemented in the future!
+
+## Protocol Testing Page
+
+There exists a [Nomo-ID Protocol Testing Page](https://qrtest.zeniq.dev) as an interactive showcase.
+When scanning the provided QRCodes, the page will show the properties that are sent by the Nomo App.
+
