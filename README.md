@@ -52,6 +52,12 @@ See the [ethSigDemo](https://github.com/nomo-app/nomo-webon-kit/blob/main/demo-w
 
 > :warning: In order to use `eth_sig`, your deeplink must include the URL-parameter `?tETH=1` or similar. This means that the Nomo App will transmit both an `eth_sig` and an ETH-address to a Nomo-ID-backend.
 
+## Redirection links
+
+During a successful (200) authentication with Nomo-ID, the backend may include the following redirection links in its JSON-response:
+
+- `redirect_url` : Nomo App will redirect to this URL in a system browser.
+- `redirect_webon_deeplink` : Nomo App will open this WebOn, or add the WebOn if it is not added yet.
 
 ## Sample App
 
